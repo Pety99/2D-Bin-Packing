@@ -3,7 +3,11 @@ import java.util.ArrayList;
 import static java.lang.Integer.max;
 import static java.lang.Integer.min;
 
-public class BestLongSide {
+public class BestLongSide implements Heuristic {
+    @Override
+    public void printName() {
+        System.out.println("BestLongSide");
+    }
     public ArrayList<Integer> score(FreeRectangle rect, Item item){
         ArrayList<Integer> ret = new ArrayList<>();
         ret.add(max(rect.getWidth()-item.getWidth(), rect.getHeight()-item.getHeight()));

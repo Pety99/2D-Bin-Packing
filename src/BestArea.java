@@ -7,6 +7,11 @@ public class BestArea implements Heuristic {
 
     }
 
+    @Override
+    public void printName() {
+        System.out.println("BestArea");
+    }
+
     public ArrayList<Integer> score(FreeRectangle rect, Item item){
         ArrayList<Integer> ret = new ArrayList<>();
         ret.add(rect.getArea()-item.getArea());

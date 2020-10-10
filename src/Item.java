@@ -10,14 +10,14 @@ public class Item{
     private boolean rotation;
     private int id;
 
-    public Item(int width, int height, int x, int y, boolean rotation) {
+    public Item(int width, int height, int x, int y, boolean rotation, int id) {
         this.width = width;
         this.height = height;
         this.x = x;
         this.y = y;
         this.rotation = rotation;
-        this.id = 0;
-        this.area = x * y;
+        this.id = id;
+        this.area = width * height;
     }
 
     public void rotate(){
